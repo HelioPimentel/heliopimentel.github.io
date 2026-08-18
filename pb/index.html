@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hélio Pimentel</title>
+    <link rel="icon" href="pesq.ico" />
+    <link rel="stylesheet" href="../bootstrap.min.css" />
+    <style>
+        body { background-color: #F7F1E3; }
+        img { height: 92vh; }
+        div { position: fixed; left: 30px; bottom: 30px; border: 5px solid #F7F1E3; padding: 20px 30px; background-color: #FFFDF6; }
+        a { text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <a href="#"><img id="Img01" src="01.png" /></a>
+    <img id="Img02" src="02.png" style="display: none" /></a>
+    <img id="Img03" src="03.png" style="display: none" /></a>
+    <img id="Img04" src="04.png" style="display: none" /></a>
+    <img id="Img05" src="05.png" style="display: none" /></a>
+    <img id="Img06" src="06.png" style="display: none" /></a>
+    <img id="Img07" src="07.png" style="display: none" /></a>
+    <img id="Img08" src="08.png" style="display: none" /></a>
+    <img id="Img09" src="09.png" style="display: none" /></a>
+    <img id="Img10" src="10.png" style="display: none" /></a>
+    <img id="Img11" src="11.png" style="display: none" /></a>
+    <div><a id="CliqueAqui" href="#" onclick="return Img();">Clique aqui: 01</a></div>
+
+    <script>
+        let n = 1;
+        function Img() {
+            const n1 = n.toString().padStart(2, '0');
+            if (++n > 11) n = 1;
+            const n2 = n.toString().padStart(2, '0');
+            document.getElementById("Img" + n1).style.display = "none";
+            document.getElementById("Img" + n2).style.display = "block";
+            document.getElementById("CliqueAqui").innerHTML = "Clique aqui: " + n2;
+            return false;
+        }
+    </script>
+</body>
+</html>
